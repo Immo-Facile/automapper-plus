@@ -40,7 +40,7 @@ class CallbackNameResolver implements NameResolverInterface
             return $operation->getAlternativePropertyName();
         }
 
-        return call_user_func($this->callback, $targetPropertyName);
+        return ($this->callback)($targetPropertyName);
     }
 
 }
